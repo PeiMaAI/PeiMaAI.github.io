@@ -14,7 +14,7 @@ picture: assets/images/profile.jpg
 # false to light theme, auto to switch with system.
 dark-theme: auto
 
-# If you want to include your resume, set to true
+# If you want to include your resume, set to true test
 # and specify source (external or local).
 resume: true
 resume-external: true
