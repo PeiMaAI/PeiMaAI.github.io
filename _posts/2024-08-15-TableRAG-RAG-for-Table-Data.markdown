@@ -3,9 +3,6 @@ title: "TableRAG(1)"
 layout: post
 date: 2024-08-15 14:30
 headerImage: false  
-tag:
-- 标签1
-- 标签2
 category: blog 
 author: Pei Ma
 description: "This passage is about Table RAGx."
