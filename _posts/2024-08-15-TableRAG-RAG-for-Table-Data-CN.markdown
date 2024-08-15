@@ -1,11 +1,11 @@
 ---
-title: "TableRAG(2)"
+title: "TableRAG(CN)"
 layout: post
-date: 2024-08-15 14:30
+date: 2024-08-15 13:51
 headerImage: false  
 category: blog 
 author: Pei Ma
-description: "This passage is about Table RAGx."
+
 ---
 
 # 背景

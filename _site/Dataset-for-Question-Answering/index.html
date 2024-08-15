@@ -9,20 +9,22 @@
     <meta name=author content="Pei Ma">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Projects | Pei Ma</title>
+<title>TableRAG(CN) | Pei Ma</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Projects" />
+<meta property="og:title" content="TableRAG(CN)" />
+<meta name="author" content="Pei Ma" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A blog about Large Language Model, RAG, and fine-tuning." />
-<meta property="og:description" content="A blog about Large Language Model, RAG, and fine-tuning." />
-<link rel="canonical" href="http://localhost:4000/projects/" />
-<meta property="og:url" content="http://localhost:4000/projects/" />
+<meta name="description" content="Title: Dataset for Question Answering (CN) [To be continued…] Date: 2024-08-14 13:21:39 Tags: Dataset" />
+<meta property="og:description" content="Title: Dataset for Question Answering (CN) [To be continued…] Date: 2024-08-14 13:21:39 Tags: Dataset" />
+<link rel="canonical" href="http://localhost:4000/Dataset-for-Question-Answering/" />
+<meta property="og:url" content="http://localhost:4000/Dataset-for-Question-Answering/" />
 <meta property="og:site_name" content="Pei Ma" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-15T07:42:00+01:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Projects" />
+<meta property="twitter:title" content="TableRAG(CN)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"A blog about Large Language Model, RAG, and fine-tuning.","headline":"Projects","url":"http://localhost:4000/projects/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pei Ma"},"dateModified":"2024-08-15T07:42:00+01:00","datePublished":"2024-08-15T07:42:00+01:00","description":"Title: Dataset for Question Answering (CN) [To be continued…] Date: 2024-08-14 13:21:39 Tags: Dataset","headline":"TableRAG(CN)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Dataset-for-Question-Answering/"},"url":"http://localhost:4000/Dataset-for-Question-Answering/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -739,49 +741,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 <body>
     <div class="wrapper-normal">
         
-            
-                <div class="page projects">
-            
+            <div class="post">
         
 
             
 
-
-    <header class="header-home animated">
-        
-            <a class="link" href="http://localhost:4000/about">
-                <img class="selfie" alt="Pei Ma" src="http://localhost:4000/assets/images/profile.jpg" />
-            </a>
-        
-
-        <h1 class="title">Pei Ma</h1>
-        <h2 class="description">Documenting my journey in learning new programming languages, tools, and technologies.</h2>
-
-        <!-- To add more icons, duplicate a section and find yout icon here -> https://fontawesome.com/v6.0/icons -->
-
-<div class="social-links">
-    
-
-    
-
-    
-
-    
-
-    
-        <a class="link" data-title="github.com/mygithub" href="https://github.com/mygithub" target="_blank"  rel="noopener" alt="anchor link for social media github" aria-label="anchor link for social media github">
-            <i class="fa-brands fa-github"></i>
-        </a>
-    
-
-    
-        <a class="link" data-title="mapeics@outlook.com" href="mailto:mapeics@outlook.com"  rel="noopener" alt="anchor link for email" aria-label="anchor link for email">
-            <i class="fa-regular fa-envelope"></i>
-        </a>
-    
-</div>
-
-    </header>
 
 
 <nav class="nav">
@@ -801,6 +765,10 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
         
 
         
+            
+                <li class="item">
+                    <a class="link" href="http://localhost:4000/projects">Projects</a>
+                </li>
             
         
 
@@ -822,33 +790,442 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 
-<section class="list">
+
+
+<h1 class="title">TableRAG(CN)</h1>
+
+<span class="date">
+    <time datetime="15-08-2024">Thursday. August 15, 2024</time>
+     - <span class="reading-time" title="Estimated read time">
     
+
+    
+        16 mins
+    
+</span>
+
+</span>
+
+
+    <div class="post-tags">
+        
+    </div>
+
+
+<p><strong>Title:</strong> Dataset for Question Answering (CN) [To be continued…]<br />
+<strong>Date:</strong> 2024-08-14 13:21:39<br />
+<strong>Tags:</strong> Dataset</p>
+
+<p>© Wuyuhang, 2024. All rights reserved. This article is entirely the work of Wuyuhang from the University of Manchester. It may not be reproduced, distributed, or used without explicit permission from the author. For inquiries, please contact me at yuhang.wu-4 [at] postgrad.manchester.ac.uk.</p>
+
+<h1 id="overview-of-qa-datasets">Overview of QA Datasets</h1>
+
+<p>Question Answering (QA) systems are a core area of research in natural language processing, aimed at extracting precise answers from various information sources. To meet diverse research needs and application scenarios, various QA datasets have emerged, systematically classified according to data format and task characteristics. This overview introduces several important QA datasets, covering a range of data types and task requirements. These datasets provide rich resources for testing and training, driving performance improvements and technological advancements in QA systems across different information formats.</p>
+
+<h2 id="open-domain-qa">Open-Domain QA</h2>
+
+<ul>
+  <li><strong><a href="https://hybridqa.github.io/">HybridQA</a></strong>: Each question is aligned with a Wikipedia table and multiple paragraphs, linking table cells to paragraphs.</li>
+  <li><strong><a href="https://ott-qa.github.io/">OTT-QA</a></strong>: Based on the HybridQA dataset, combining text and table evidence to create an open-domain QA benchmark.</li>
+  <li><strong><a href="https://arxiv.org/pdf/2103.12011">NQ-Table</a></strong>: An open-domain QA dataset that combines table and text evidence.</li>
+  <li><strong><a href="https://nextplusplus.github.io/TAT-QA/">TAT-QA</a></strong>: Similar to FinQA but includes both arithmetic questions and range questions.</li>
+  <li><strong><a href="https://finqasite.github.io/">FinQA</a></strong>: A financial report dataset based on HybridQA, including only arithmetic questions (excluding range questions).</li>
+  <li><strong><a href="https://github.com/psunlpgroup/MultiHiertt">MultiHiertt</a></strong>: A numerical reasoning dataset with hierarchical tables and text.</li>
+  <li><strong><a href="https://nlp.cs.washington.edu/triviaqa/">TriviaQA</a></strong>: An open-domain QA dataset with multiple domains, providing rich evidence paragraphs for answering questions.</li>
+  <li><strong><a href="https://ai.google.com/research/NaturalQuestions">Natural Questions</a></strong>: Provides natural language questions and their corresponding Wikipedia paragraphs, supporting open-domain QA research.</li>
+  <li><strong><a href="https://hotpotqa.github.io/">HotpotQA</a></strong>: Provides multi-hop reasoning questions and answers, requiring information retrieval from multiple documents to answer.</li>
+  <li><strong><a href="https://fever.ai/">FEVER</a></strong>: Primarily used for fact verification tasks, offering news articles and corresponding truth judgment questions.</li>
+</ul>
+
+<h2 id="table-based-qa">Table-Based QA</h2>
+
+<ul>
+  <li><strong><a href="https://ppasupat.github.io/WikiTableQuestions/">WikiTableQuestions (WTQ)</a></strong>: Contains 22,033 question-answer pairs with 2,108 tables; manually annotated questions and answers.</li>
+  <li><strong><a href="https://github.com/salesforce/WikiSQL">WikiSQL</a></strong>: SQL-annotated tables from Wikipedia, including 81,000 questions and 24,000 tables.</li>
+  <li><strong><a href="https://github.com/IBM/AITQA">AIT-QA</a></strong>: Involves hierarchical tables with 116 tables about U.S. flights and 515 questions.</li>
+  <li><strong><a href="https://arxiv.org/pdf/2108.06712v3">HiTab</a></strong>: A dataset for hierarchical tables.</li>
+  <li><strong><a href="https://github.com/google-research/tapas">TAPAS</a></strong>: A table-based QA dataset combining SQL queries and natural language questions, covering various table formats.</li>
+  <li><strong><a href="https://github.com/wtmo/TabFact">TabFact</a></strong>: A fact verification dataset with tables, providing a large number of tables and corresponding fact-checking questions.</li>
+  <li><strong><a href="https://github.com/ABSA-HKUST/TableQA">TableQA</a></strong>: Covers QA tasks across various table structures, focusing on extracting information from tables.</li>
+  <li><strong><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54253">SQA</a></strong>: Focuses on QA tasks involving structured data through SQL queries.</li>
+</ul>
+
+<h2 id="knowledge-graph-qa">Knowledge Graph QA</h2>
+
+<ul>
+  <li><strong>MetaQA (2018)</strong>: A knowledge graph QA dataset.</li>
+  <li><strong>GRAPHQ (2016)</strong>: A knowledge graph QA dataset.</li>
+  <li><strong>WebQSP (2016)</strong>: A QA dataset based on Freebase.</li>
+  <li><strong>CWQ (2018)</strong>: An extended dataset based on WebQSP, using SPARQL query annotations to study semantic parsing.</li>
+  <li><strong>LC-QuAD (2017)</strong> and <strong>LC-QuAD 2.0 (2019)</strong>: Knowledge graph datasets based on Wikidata and DBpedia, including 30,000 questions with SPARQL query annotations.</li>
+  <li><strong>GrailQA (2021)</strong>: A knowledge graph QA dataset based on Freebase, with 64,000 questions and query annotations.</li>
+  <li><strong>KQA Pro (2022)</strong>: A dataset with NL questions and SPARQL annotations, including knowledge graphs from FB15k-237 and aligned Wikidata entities and 3,000 additional entities.</li>
+  <li><strong>Freebase QA (2014)</strong>: An early QA dataset using the Freebase knowledge graph, providing a large number of QA pairs about the knowledge graph.</li>
+</ul>
+
+<h2 id="knowledge-graph--text-qa">Knowledge Graph + Text QA</h2>
+
+<ul>
+  <li>Evaluates open-domain text QA datasets: TriviaQA (2017), WebQuestion (2013), CWQ (2018), WebQAP (2016), using knowledge graphs like WordNet, Freebase, ConceptNet.</li>
+  <li><strong>WebQuestion (2013)</strong>: Contains natural language questions targeting Freebase and corresponding answers, widely used in knowledge graph and text QA research.</li>
+  <li><strong>ComplexWebQuestions (CWQ) (2018)</strong>: Extends WebQuestion with complex SPARQL queries to test knowledge graph QA capabilities.</li>
+</ul>
+
+<h2 id="document-based-qa">Document-Based QA</h2>
+
+<ul>
+  <li><strong>SQuAD (2018)</strong>: A document QA dataset providing a large-scale collection of paragraphs and question pairs for assessing model comprehension. <a href="https://rajpurkar.github.io/SQuAD-explorer/">SQuAD</a></li>
+  <li><strong>TrivialQA (2017)</strong>: A document QA dataset focusing on simple questions, mainly used for baseline model evaluation.</li>
+  <li><strong>Natural Questions (NQ) (2019)</strong>: Provides natural language questions and their corresponding Wikipedia paragraphs, supporting open-domain QA research. <a href="https://ai.google.com/research/NaturalQuestions">Natural Questions</a></li>
+  <li><strong>SearchQA (2017)</strong>: A search engine-based QA dataset, including questions and answers extracted from web search results.</li>
+  <li><strong>DocVQA (2020)</strong>: A document QA dataset focusing on extracting information from complex documents, including scanned documents and tables.</li>
+  <li><strong>FEVEROUS (2020)</strong>: A fact verification QA dataset, expanding the FEVER dataset with additional documents and verification tasks.</li>
+  <li><strong>HotpotQA (2018)</strong>: Provides multi-hop reasoning questions and answers, requiring information retrieval from multiple documents to answer. <a href="https://hotpotqa.github.io/">HotpotQA</a></li>
+</ul>
+
+<p>Sure, here is the refined text in natural, academic English and formatted in Markdown:</p>
+
+<hr />
+
+<p><strong>Title:</strong> Dataset for Question Answering (CN) [To be continued…]<br />
+<strong>Date:</strong> 2024-08-14 13:21:39<br />
+<strong>Tags:</strong> Dataset</p>
+
+<p>© Wuyuhang, 2024. All rights reserved. This article is entirely the work of Wuyuhang from the University of Manchester. It may not be reproduced, distributed, or used without explicit permission from the author. For inquiries, please contact me at yuhang.wu-4 [at] postgrad.manchester.ac.uk.</p>
+
+<h1 id="overview-of-qa-datasets-1">Overview of QA Datasets</h1>
+
+<p>Question Answering (QA) systems are a core area of research in natural language processing, aimed at extracting precise answers from various information sources. To meet diverse research needs and application scenarios, various QA datasets have emerged, systematically classified according to data format and task characteristics. This overview introduces several important QA datasets, covering a range of data types and task requirements. These datasets provide rich resources for testing and training, driving performance improvements and technological advancements in QA systems across different information formats.</p>
+
+<h2 id="open-domain-qa-1">Open-Domain QA</h2>
+
+<ul>
+  <li><strong><a href="https://hybridqa.github.io/">HybridQA</a></strong>: Each question is aligned with a Wikipedia table and multiple paragraphs, linking table cells to paragraphs.</li>
+  <li><strong><a href="https://ott-qa.github.io/">OTT-QA</a></strong>: Based on the HybridQA dataset, combining text and table evidence to create an open-domain QA benchmark.</li>
+  <li><strong><a href="https://arxiv.org/pdf/2103.12011">NQ-Table</a></strong>: An open-domain QA dataset that combines table and text evidence.</li>
+  <li><strong><a href="https://nextplusplus.github.io/TAT-QA/">TAT-QA</a></strong>: Similar to FinQA but includes both arithmetic questions and range questions.</li>
+  <li><strong><a href="https://finqasite.github.io/">FinQA</a></strong>: A financial report dataset based on HybridQA, including only arithmetic questions (excluding range questions).</li>
+  <li><strong><a href="https://github.com/psunlpgroup/MultiHiertt">MultiHiertt</a></strong>: A numerical reasoning dataset with hierarchical tables and text.</li>
+  <li><strong><a href="https://nlp.cs.washington.edu/triviaqa/">TriviaQA</a></strong>: An open-domain QA dataset with multiple domains, providing rich evidence paragraphs for answering questions.</li>
+  <li><strong><a href="https://ai.google.com/research/NaturalQuestions">Natural Questions</a></strong>: Provides natural language questions and their corresponding Wikipedia paragraphs, supporting open-domain QA research.</li>
+  <li><strong><a href="https://hotpotqa.github.io/">HotpotQA</a></strong>: Provides multi-hop reasoning questions and answers, requiring information retrieval from multiple documents to answer.</li>
+  <li><strong><a href="https://fever.ai/">FEVER</a></strong>: Primarily used for fact verification tasks, offering news articles and corresponding truth judgment questions.</li>
+</ul>
+
+<h2 id="table-based-qa-1">Table-Based QA</h2>
+
+<ul>
+  <li><strong><a href="https://ppasupat.github.io/WikiTableQuestions/">WikiTableQuestions (WTQ)</a></strong>: Contains 22,033 question-answer pairs with 2,108 tables; manually annotated questions and answers.</li>
+  <li><strong><a href="https://github.com/salesforce/WikiSQL">WikiSQL</a></strong>: SQL-annotated tables from Wikipedia, including 81,000 questions and 24,000 tables.</li>
+  <li><strong><a href="https://github.com/IBM/AITQA">AIT-QA</a></strong>: Involves hierarchical tables with 116 tables about U.S. flights and 515 questions.</li>
+  <li><strong><a href="https://arxiv.org/pdf/2108.06712v3">HiTab</a></strong>: A dataset for hierarchical tables.</li>
+  <li><strong><a href="https://github.com/google-research/tapas">TAPAS</a></strong>: A table-based QA dataset combining SQL queries and natural language questions, covering various table formats.</li>
+  <li><strong><a href="https://github.com/wtmo/TabFact">TabFact</a></strong>: A fact verification dataset with tables, providing a large number of tables and corresponding fact-checking questions.</li>
+  <li><strong><a href="https://github.com/ABSA-HKUST/TableQA">TableQA</a></strong>: Covers QA tasks across various table structures, focusing on extracting information from tables.</li>
+  <li><strong><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54253">SQA</a></strong>: Focuses on QA tasks involving structured data through SQL queries.</li>
+</ul>
+
+<h2 id="knowledge-graph-qa-1">Knowledge Graph QA</h2>
+
+<ul>
+  <li><strong>MetaQA (2018)</strong>: A knowledge graph QA dataset.</li>
+  <li><strong>GRAPHQ (2016)</strong>: A knowledge graph QA dataset.</li>
+  <li><strong>WebQSP (2016)</strong>: A QA dataset based on Freebase.</li>
+  <li><strong>CWQ (2018)</strong>: An extended dataset based on WebQSP, using SPARQL query annotations to study semantic parsing.</li>
+  <li><strong>LC-QuAD (2017)</strong> and <strong>LC-QuAD 2.0 (2019)</strong>: Knowledge graph datasets based on Wikidata and DBpedia, including 30,000 questions with SPARQL query annotations.</li>
+  <li><strong>GrailQA (2021)</strong>: A knowledge graph QA dataset based on Freebase, with 64,000 questions and query annotations.</li>
+  <li><strong>KQA Pro (2022)</strong>: A dataset with NL questions and SPARQL annotations, including knowledge graphs from FB15k-237 and aligned Wikidata entities and 3,000 additional entities.</li>
+  <li><strong>Freebase QA (2014)</strong>: An early QA dataset using the Freebase knowledge graph, providing a large number of QA pairs about the knowledge graph.</li>
+</ul>
+
+<h2 id="knowledge-graph--text-qa-1">Knowledge Graph + Text QA</h2>
+
+<ul>
+  <li>Evaluates open-domain text QA datasets: TriviaQA (2017), WebQuestion (2013), CWQ (2018), WebQAP (2016), using knowledge graphs like WordNet, Freebase, ConceptNet.</li>
+  <li><strong>WebQuestion (2013)</strong>: Contains natural language questions targeting Freebase and corresponding answers, widely used in knowledge graph and text QA research.</li>
+  <li><strong>ComplexWebQuestions (CWQ) (2018)</strong>: Extends WebQuestion with complex SPARQL queries to test knowledge graph QA capabilities.</li>
+</ul>
+
+<h2 id="document-based-qa-1">Document-Based QA</h2>
+
+<ul>
+  <li><strong><a href="https://rajpurkar.github.io/SQuAD-explorer/">SQuAD</a></strong>: A document QA dataset providing a large-scale collection of paragraphs and question pairs for assessing model comprehension.</li>
+  <li><strong>TrivialQA (2017)</strong>: A document QA dataset focusing on simple questions, mainly used for baseline model evaluation.</li>
+  <li><strong><a href="https://ai.google.com/research/NaturalQuestions">Natural Questions</a></strong>: Provides natural language questions and their corresponding Wikipedia paragraphs, supporting open-domain QA research.</li>
+  <li><strong>SearchQA (2017)</strong>: A search engine-based QA dataset, including questions and answers extracted from web search results.</li>
+  <li><strong>DocVQA (2020)</strong>: A document QA dataset focusing on extracting information from complex documents, including scanned documents and tables.</li>
+  <li><strong>FEVEROUS (2020)</strong>: A fact verification QA dataset, expanding the FEVER dataset with additional documents and verification tasks.</li>
+  <li><strong><a href="https://hotpotqa.github.io/">HotpotQA</a></strong>: Provides multi-hop reasoning questions and answers, requiring information retrieval from multiple documents to answer.</li>
+</ul>
+
+<h1 id="detailed-qa-dataset-descriptions">Detailed QA Dataset Descriptions</h1>
+
+<h2 id="open-domain-qa-datasets">Open-Domain QA Datasets</h2>
+
+<h3 id="hybridqa"><a href="https://hybridqa.github.io/">HybridQA</a></h3>
+
+<p><strong>Introduction</strong>: <a href="https://hybridqa.github.io/">HybridQA</a>, proposed by Chen et al. in “HybridQA: A Dataset of Multi-Hop Question Answering over Tabular and Textual Data,” addresses the challenge of reasoning over heterogeneous information. Unlike existing QA datasets that primarily focus on homogeneous information, HybridQA requires reasoning over both tables and text. Each question is associated with a Wikipedia table and multiple paragraphs related to the table’s entities. The questions are designed to require synthesizing both types of information, making the absence of either type insufficient for answering. Experiments show that while baseline models using only tables or text perform poorly, a hybrid model that integrates both types achieves significantly better results, though still trailing behind human performance. This dataset serves as a challenging benchmark for studying QA tasks involving heterogeneous information.</p>
+
+<p><strong>Dataset and Code</strong>: Available publicly at <a href="https://github.com/wenhuchen/HybridQA">GitHub - HybridQA</a>.</p>
+
+<h3 id="tat-qa">TAT-QA</h3>
+
+<p><strong>Introduction</strong>: TAT-QA, introduced by Zhu et al. in “TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance,” is a large-scale QA dataset aimed at advancing research on complex financial data that combines tables and text. It involves questions requiring numerical reasoning over financial reports.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Context includes a semi-structured table and at least two related paragraphs describing or supplementing the table content.</li>
+  <li>Questions are generated by experts with rich financial knowledge, most being real-world application questions.</li>
+  <li>Answers vary in format, including single span, multiple spans, and free-form responses.</li>
+  <li>Answering often requires diverse numerical reasoning abilities such as addition, subtraction, multiplication, division, counting, comparison, sorting, and combinations thereof.</li>
+  <li>Along with real answers, the dataset includes the corresponding reasoning processes and scales, when applicable.</li>
+</ul>
+
+<p><strong>Size</strong>: TAT-QA contains 16,552 questions based on 2,757 mixed-context financial reports.</p>
+
+<h3 id="finqa">FinQA</h3>
+
+<p><strong>Introduction</strong>: FinQA, proposed by Chen et al. in “FinQA: A Dataset of Numerical Reasoning over Financial Data,” focuses on deep QA over financial data, aiming to automate the analysis of extensive financial documents. Compared to general domain tasks, the financial domain involves complex numerical reasoning and understanding of heterogeneous representations.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Provides QA pairs created by financial experts, with annotated gold reasoning programs to ensure full interpretability.</li>
+  <li>Introduces baseline models and conducts extensive experiments, showing that popular large pre-trained models significantly lag behind experts in acquiring financial knowledge and performing complex multi-step numerical reasoning.</li>
+  <li>Dataset and code are available at <a href="https://github.com/czyssrs/FinQA">GitHub - FinQA</a>.</li>
+</ul>
+
+<h3 id="multihiertt"><a href="https://github.com/psunlpgroup/MultiHiertt">MultiHiertt</a></h3>
+
+<p><strong>Introduction</strong>: <a href="https://github.com/psunlpgroup/MultiHiertt">MultiHiertt</a>, introduced by Wang et al. in “MultiHiertt: A Multi-Modal Dataset for Hierarchical Table-Based Numerical Reasoning,” provides a dataset specifically for numerical reasoning over hierarchical tables. Unlike other table-based datasets that focus on flat or moderately complex tables, <a href="https://github.com/psunlpgroup/MultiHiertt">MultiHiertt</a> features hierarchical tables that reflect the multi-level nature of real-world financial documents.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Contains hierarchical tables with multiple levels of nesting, reflecting complex financial data structures.</li>
+  <li>Focuses on multi-modal reasoning, requiring combining information from different hierarchical levels and types.</li>
+</ul>
+
+<p><strong>Size</strong>: <a href="https://github.com/psunlpgroup/MultiHiertt">MultiHiertt</a> includes a range of hierarchical tables and associated questions to test different levels of numerical reasoning.</p>
+
+<p>Certainly! Here’s the refined version of the content in academic English with Markdown formatting:</p>
+
+<hr />
+
+<h3 id="hotpotqa"><a href="https://hotpotqa.github.io/">HotpotQA</a></h3>
+
+<p><strong>Introduction</strong>: <a href="https://hotpotqa.github.io/">HotpotQA</a> was introduced by Yang et al. in “<a href="https://hotpotqa.github.io/">HotpotQA</a>: A Dataset for Diverse, Explainable Multi-hop Question Answering”. This dataset, based on English Wikipedia, includes approximately 113,000 crowd-sourced questions that require information from two introductory paragraphs of Wikipedia articles to answer.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Covers various reasoning strategies, including questions involving missing entities, intersection questions (e.g., “What satisfies both attribute A and attribute B?”), and comparison questions.</li>
+  <li>Provides ten paragraphs, including golden paragraphs. In the open-domain full Wikipedia setting, models are given only the question and the entire Wikipedia.</li>
+  <li>Evaluation metrics include answer accuracy (measured by Exact Match (EM) and word F1 score) and explainability (assessing the alignment of predicted supporting sentences with human-annotated sentences).</li>
+</ul>
+
+<h3 id="fever"><a href="https://fever.ai/">FEVER</a></h3>
+
+<p><strong>Introduction</strong>: FEVER (Fact Extraction and VERification) was proposed by Thorne et al. in “FEVER: a large-scale dataset for Fact Extraction and VERification”. This dataset is used for verifying facts from textual sources and includes 185,445 statements generated by altering sentences from Wikipedia, which are subsequently verified.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Statements are classified as “support”, “refute”, or “not enough information”.</li>
+  <li>For the first two categories, annotators record the sentences required to make a judgment.</li>
+  <li>Developed a pipeline approach and compared it with well-designed predictors, demonstrating that FEVER is a challenging test platform that advances research in statement verification from textual sources.</li>
+</ul>
+
+<p><strong>Dataset and Code</strong>: <a href="https://fever.ai/">FEVER</a></p>
+
+<h2 id="table-based-question-answering-datasets">Table-Based Question Answering Datasets</h2>
+
+<h3 id="wikitablequestions-wtq"><a href="https://ppasupat.github.io/WikiTableQuestions/">WikiTableQuestions (WTQ)</a></h3>
+
+<p><strong>Introduction</strong>: <a href="https://ppasupat.github.io/WikiTableQuestions/">WikiTableQuestions (WTQ)</a>, introduced by Pasupat et al. in “Compositional Semantic Parsing on Semi-Structured Tables”, is based on HTML tables and includes 22,033 question-answer pairs. The questions were crafted by Amazon Mechanical Turk workers, and the tables were sourced from Wikipedia, each containing at least 8 rows and 5 columns.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Questions are manually crafted by users rather than through predefined templates, showcasing significant linguistic variability.</li>
+  <li>Compared to previous knowledge base datasets, it covers nearly 4,000 unique column headers and involves more relationships than closed-domain datasets.</li>
+  <li>Questions span a wide range of domains and require various operations, including table retrieval, aggregation, superlatives (e.g., maximum, minimum), arithmetic calculations, joining, and merging.</li>
+</ul>
+
+<h3 id="ait-qa"><a href="https://github.com/IBM/AITQA">AIT-QA</a></h3>
+
+<p><strong>Introduction</strong>: <a href="https://github.com/IBM/AITQA">AIT-QA</a> (Airline Industry Table QA), proposed by Katsis et al. in “AIT-QA: Question Answering Dataset over Complex Tables in the Airline Industry”, is a domain-specific table-based question answering dataset. It includes 515 questions crafted by human annotators based on 116 tables extracted from the annual reports of major airlines from the SEC filings (2017-2019). The dataset also contains annotations on the nature of questions, highlighting those requiring hierarchical headers, domain-specific terminology, and synonym variations.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>The table layouts are more complex, presenting greater challenges compared to traditional table-based QA datasets.</li>
+  <li>Includes annotations indicating questions that require hierarchical headers, domain-specific terminology, and synonym variations.</li>
+</ul>
+
+<p><strong>Dataset and Code</strong>: Available publicly: <a href="https://github.com/IBM/AITQA">GitHub - AIT-QA</a></p>
+
+<h3 id="tabfact"><a href="https://tabfact.github.io/">TabFact</a></h3>
+
+<p><strong>Introduction</strong>: <a href="https://tabfact.github.io/">TabFact</a>, introduced by Chen et al. in “TabFact: A Large-scale Dataset for Table-based Fact Verification”, is a large-scale dataset containing 117,854 manually annotated statements involving 16,573 Wikipedia tables. The relationships in these statements are classified as “entailed” or “refuted”. <a href="https://tabfact.github.io/">TabFact</a> is the first dataset designed to evaluate language reasoning over structured data, involving both symbolic and linguistic reasoning skills.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Provides a large-scale dataset for fact verification based on tables.</li>
+  <li>Relationship classification as “entailed” or “refuted”, challenging the model’s language reasoning and structured data processing capabilities.</li>
+</ul>
+
+<p><strong>Dataset and Code</strong>: Available publicly: <a href="https://tabfact.github.io/">TabFact</a></p>
+
+<h3 id="sqa-sequentialqa"><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54253">SQA</a> (SequentialQA)</h3>
+
+<p><strong>Introduction</strong>: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=54253">SQA</a>, proposed by Iyyer et al. in “Search-based Neural Structured Learning for Sequential Question Answering”, explores the task of answering a sequence of related questions over HTML tables. The dataset comprises 6,066 sequences, totaling 17,553 questions.</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Focuses on answering a series of related questions within HTML tables.</li>
+  <li>Provides a rich set of sequential questions, covering various problem orders and interrelationships.</li>
+</ul>
+
+<p><strong>Dataset and Code</strong>: Available publicly: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=54253">SQA</a></p>
+
+<h1 id="to-be-continued">(To be continued…)</h1>
+
+<h2 id="acknowledgment">Acknowledgment</h2>
+<p>I would like to express my sincere gratitude to my advisor, Jiaoyan Chen, for his invaluable guidance throughout this research. His generous sharing of datasets and resources has been instrumental in the development of this study.</p>
+
+<h2 id="reference">Reference</h2>
+<ol>
+  <li>Chen, W., Zha, H., Chen, Z., Xiong, W., Wang, H. and Wang, W., 2020. Hybridqa: A dataset of multi-hop question answering over tabular and textual data. arXiv preprint arXiv:2004.07347.</li>
+  <li>Chen, W., Chang, M.W., Schlinger, E., Wang, W. and Cohen, W.W., 2020. Open question answering over tables and text. arXiv preprint arXiv:2010.10439.</li>
+  <li>Herzig, J., Müller, T., Krichene, S. and Eisenschlos, J.M., 2021. Open domain question answering over tables via dense retrieval. arXiv preprint arXiv:2103.12011.</li>
+  <li>Chen, Z., Chen, W., Smiley, C., Shah, S., Borova, I., Langdon, D., Moussa, R., Beane, M., Huang, T.H., Routledge, B. and Wang, W.Y., 2021. Finqa: A dataset of numerical reasoning over financial data. arXiv preprint arXiv:2109.00122.</li>
+  <li>Zhao, Y., Li, Y., Li, C. and Zhang, R., 2022. MultiHiertt: Numerical reasoning over multi hierarchical tabular and textual data. arXiv preprint arXiv:2206.01347.</li>
+  <li>Qi, P., Lin, X., Mehr, L., Wang, Z. and Manning, C.D., 2019. Answering complex open-domain questions through iterative query generation. arXiv preprint arXiv:1910.07000.</li>
+  <li>Joshi, M., Choi, E., Weld, D.S. and Zettlemoyer, L., 2017. Triviaqa: A large scale distantly supervised challenge dataset for reading comprehension. arXiv preprint arXiv:1705.03551.</li>
+  <li>Thorne, J., Vlachos, A., Christodoulopoulos, C. and Mittal, A., 2018. FEVER: a large-scale dataset for fact extraction and VERification. arXiv preprint arXiv:1803.05355.</li>
+  <li>Pasupat, P. and Liang, P., 2015. Compositional semantic parsing on semi-structured tables. arXiv preprint arXiv:1508.00305.</li>
+  <li>Katsis, Y., Chemmengath, S., Kumar, V., Bharadwaj, S., Canim, M., Glass, M., Gliozzo, A., Pan, F., Sen, J., Sankaranarayanan, K. and Chakrabarti, S., 2021. AIT-QA: Question answering dataset over complex tables in the airline industry. arXiv preprint arXiv:2106.12944.</li>
+  <li>Cheng, Z., Dong, H., Wang, Z., Jia, R., Guo, J., Gao, Y., Han, S., Lou, J.G. and Zhang, D., 2021. Hitab: A hierarchical table dataset for question answering and natural language generation. arXiv preprint arXiv:2108.06712.</li>
+  <li>Chen, W., Wang, H., Chen, J., Zhang, Y., Wang, H., Li, S., Zhou, X. and Wang, W.Y., 2019. Tabfact: A large-scale dataset for table-based fact verification. arXiv preprint arXiv:1909.02164.</li>
+</ol>
+
+
+
+    <div class="blog-navigation">
+        
+            <a class="prev" href="http://localhost:4000/LLM-for-table-data-enhancement-CN/">&laquo; LLM for table data enhancement-CN</a>
+        
+        
+            <a class="next" href="http://localhost:4000/Dataset-for-Question-Answering-CN/">Dataset-for-Question-Answering(CN) &raquo;</a>
+        
+    </div>
+
+
+
+    <div class="related">
+    
+    
+        
         
     
         
-    
         
     
         
-    
         
     
         
-    
         
     
         
-    
         
     
         
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
         
             
         
     
+    
+</div>
+
+
+
+
+    <section class="author">
+    <div class="toleft">
+        <img
+            class="selfie"
+            src="http://localhost:4000/"
+            alt=""
+        />
+    </div>
+
+    <div class="toright">
+        <h4 class="name"></h4>
+        <p class="bio"></p>
+
+        <div class="share">
+            <!-- Note: Only use three share links if your site width is set to large -->
+            <!-- If site width is set to normal, you may choose any two share links -->
+            <a
+                class="twitter"
+                href="https://twitter.com/intent/tweet?text=http://localhost:4000/Dataset-for-Question-Answering/ - TableRAG(CN) by @"
+            >
+                <i class="fa-brands fa-twitter"></i>
+                <span class="icon-twitter">Tweet</span>
+            </a>
+
+            <a
+                class="facebook"
+                href="javascript:void(0)"
+                onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;"
+            >
+                <i class="fa-brands fa-facebook"></i>
+                <span class="icon-facebook-rect">Share</span>
+            </a>
+
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:4000/Dataset-for-Question-Answering/&amp;title=TableRAG(CN)&amp;summary=&amp;source=http://localhost:4000" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="icon-linkedin">Share</span>
+            </a> -->
+        </div>
+    </div>
 </section>
+
+
+
+
+    <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+
+        var disqus_config = function () {
+            this.page.url = 'http://localhost:4000/Dataset-for-Question-Answering/';
+            this.page.identifier = '/Dataset-for-Question-Answering';
+        };
+        var disqus_shortname = 'github';
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
 
 
 <footer class="footer-main">
