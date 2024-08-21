@@ -11,7 +11,7 @@ author: Pei Ma
 
 随着大规模语言模型（LLM）的不断发展，检索增强生成（RAG）技术在解决复杂自然语言处理任务中变得越来越普及。通过将信息检索与文本生成相结合，RAG为知识密集型任务提供了更准确且上下文相关的答案。这种方法已在问答系统、文档管理和企业应用等领域变得不可或缺。
 
-此前，我们对现有的RAG框架和向量数据库进行了详细的回顾和分析，讨论了它们在实际应用中的优缺点和性能表现。若需深入了解，可以参考我们的[RAG End2end框架和向量数据库总结](https://yuhangwuai.github.io/2024/08/13/RAG-End2end-Frame-and-Vector-DB-Summary/)。
+此前，我们对现有的RAG框架和向量数据库进行了详细的回顾和分析，讨论了它们在实际应用中的优缺点和性能表现。若需深入了解，可以参考我们的[RAG End2end框架和向量数据库总结](https://peimaai.github.io//RAG-End2end-Frame-and-Vector-DB-Summary-CN/)。
 
 ## 现有RAG框架的现状与挑战
 

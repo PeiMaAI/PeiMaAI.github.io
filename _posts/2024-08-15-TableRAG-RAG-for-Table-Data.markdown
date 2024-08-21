@@ -65,7 +65,7 @@ The above architecture and enhancement mechanisms effectively address the challe
 
 ## [Tablefact](https://tabfact.github.io/)
 
-In the existing TableQA datasets, we have conducted extensive attempts and research. For detailed dataset organization, please refer to my other blog: [Dataset for Question Answering](https://yuhangwuai.github.io/2024/08/14/Dataset-for-Question-Answering/). Through these experiences, we found that when using datasets for retrieval-augmented generation in TableQA, we mainly face the following issues:
+In the existing TableQA datasets, we have conducted extensive attempts and research. For detailed dataset organization, please refer to my other blog: [Dataset for Question Answering](/https://peimaai.github.io//Dataset-for-Question-Answering/). Through these experiences, we found that when using datasets for retrieval-augmented generation in TableQA, we mainly face the following issues:
 
 1. **Short Questions Lead to Poor Recall**:
     - Questions in many QA datasets are typically very short, consisting of only a few words. Such short queries often lead to poor recall of relevant tables in similarity-based retrieval or other dense retrieval processes.
@@ -736,9 +736,6 @@ To evaluate the recall rates of different retrievers, the following experiments 
 # Acknowledgments
 I would like to express my sincere gratitude to the authors of the paper [“Tap4llm: Table provider on sampling, augmenting, and packing semi-structured data for large language model reasoning”](https://arxiv.org/abs/2312.09039) for providing valuable insights that influenced some of the ideas presented in this article. 
 Additionally, I would like to thank PeiMa from the University of Leeds for her significant contributions to this project. Her expertise and support were instrumental in shaping the outcome of this work.
-
-### Copyright Notice
-© Wuyuhang, 2024. All rights reserved. This article is entirely the work of Wuyuhang from the University of Manchester. It may not be reproduced, distributed, or used without explicit permission from the author. For inquiries, please contact me at yuhang.wu-4 [at] postgrad.manchester.ac.uk.
 
 ## Reference
 

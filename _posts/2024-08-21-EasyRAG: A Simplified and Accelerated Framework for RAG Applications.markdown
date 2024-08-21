@@ -11,7 +11,7 @@ author: Pei Ma
 
 As large-scale language models (LLMs) continue to evolve, Retrieval-Augmented Generation (RAG) technology has become increasingly widespread in solving complex natural language processing tasks. By combining information retrieval with text generation, RAG provides more accurate and contextually relevant answers for knowledge-intensive tasks. This approach has already become indispensable in areas such as question-answering systems, document management, and enterprise applications.
 
-Previously, we conducted a detailed review and analysis of existing RAG frameworks and vector databases, discussing their strengths, weaknesses, and performance in practical applications. For an in-depth understanding, you can refer to our [RAG End2end Frame and Vector DB Summary](https://yuhangwuai.github.io/2024/08/13/RAG-End2end-Frame-and-Vector-DB-Summary/).
+Previously, we conducted a detailed review and analysis of existing RAG frameworks and vector databases, discussing their strengths, weaknesses, and performance in practical applications. For an in-depth understanding, you can refer to our [RAG End2end Frame and Vector DB Summary](https://peimaai.github.io//RAG-End2end-Frame-and-Vector-DB-Summary/).
 
 ## Current Status and Challenges of Existing RAG Frameworks
 

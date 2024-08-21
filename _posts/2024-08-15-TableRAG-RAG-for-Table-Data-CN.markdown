@@ -63,7 +63,7 @@ author: Pei Ma
 
 ## [Tablefact](https://tabfact.github.io/)
 
-在现有的表格问答数据集中，我们已经进行了广泛的尝试和研究。关于详细的数据集整理，请参阅我的另一篇博客：[Dataset for Question Answering](https://yuhangwuai.github.io/2024/08/14/Dataset-for-Question-Answering/)：。通过这些经验，我们在使用数据集进行表格问答的检索增强生成时，发现主要面临以下几个问题：
+在现有的表格问答数据集中，我们已经进行了广泛的尝试和研究。关于详细的数据集整理，请参阅我的另一篇博客：[Dataset for Question Answering](https://peimaai.github.io//Dataset-for-Question-Answering-CN/)：。通过这些经验，我们在使用数据集进行表格问答的检索增强生成时，发现主要面临以下几个问题：
 
 1. **问题简短导致召回效果不佳**：
     - 许多问答数据集中的问题通常非常简短，仅由几个单词组成。这种简短的提问在相似度检索或其他密集型检索过程中，往往导致相关表格的召回效果不佳。
@@ -731,8 +731,6 @@ semi-structured data for large language model reasoning. *arXiv preprint arXiv:2
 # Acknowledgments
 I would like to express my sincere gratitude to the authors of the paper [“Tap4llm: Table provider on sampling, augmenting, and packing semi-structured data for large language model reasoning”](https://arxiv.org/abs/2312.09039) for providing valuable insights that influenced some of the ideas presented in this article. Additionally, I would like to thank PeiMa from the University of Leeds for her significant contributions to this project. Her expertise and support were instrumental in shaping the outcome of this work.
 
-### Copyright Notice
-© Wuyuhang, 2024. All rights reserved. This article is entirely the work of Wuyuhang from the University of Manchester. It may not be reproduced, distributed, or used without explicit permission from the author. For inquiries, please contact me at yuhang.wu-4 [at] postgrad.manchester.ac.uk.
 
 ## Reference
 
