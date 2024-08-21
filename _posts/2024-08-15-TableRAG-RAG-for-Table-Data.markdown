@@ -65,7 +65,7 @@ The above architecture and enhancement mechanisms effectively address the challe
 
 ## [Tablefact](https://tabfact.github.io/)
 
-In the existing TableQA datasets, we have conducted extensive attempts and research. For detailed dataset organization, please refer to my other blog: [Dataset for Question Answering](/https://peimaai.github.io//Dataset-for-Question-Answering/). Through these experiences, we found that when using datasets for retrieval-augmented generation in TableQA, we mainly face the following issues:
+In the existing TableQA datasets, we have conducted extensive attempts and research. For detailed dataset organization, please refer to my other blog: [Dataset for Question Answering](/https://peimaai.github.io/Dataset-for-Question-Answering/). Through these experiences, we found that when using datasets for retrieval-augmented generation in TableQA, we mainly face the following issues:
 
 1. **Short Questions Lead to Poor Recall**:
     - Questions in many QA datasets are typically very short, consisting of only a few words. Such short queries often lead to poor recall of relevant tables in similarity-based retrieval or other dense retrieval processes.
