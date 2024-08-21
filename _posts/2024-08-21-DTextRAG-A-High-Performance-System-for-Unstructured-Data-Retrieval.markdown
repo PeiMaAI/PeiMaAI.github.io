@@ -1,5 +1,5 @@
 ---
-title: "TableRAG(CN)"
+title: "TextRAG: A High-Performance System for Unstructured Data Retrieval"
 layout: post
 date: 2024-08-21 10:53
 headerImage: false  
