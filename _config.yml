@@ -21,7 +21,6 @@ resume-external: true
 resume-url: https://google.com/?q=my+resume
 
 url: https://peimaai.github.io/
-# your url: https://USERNAME.github.io
 
 permalink: /:title/
 
@@ -38,7 +37,7 @@ disqus:
 # twitter: mytwitter
 # instagram: myinstagram
 # linkedin: mylinkedin
-github: mygithub
+github: https://github.com/PeiMaAI
 email: mapeics@outlook.com
 
 authors:
