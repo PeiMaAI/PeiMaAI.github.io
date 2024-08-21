@@ -1,15 +1,12 @@
 ---
 title: "Dataset-for-Question-Answering(CN)"
 layout: post
-date: 2024-08-15 09:02
+date: 2024-08-20 09:02
 headerImage: false  
 category: blog 
 author: Pei Ma
 ---
-
-**Title:** Dataset for Question Answering (CN) [To be continued...]  
-**Date:** 2024-08-14 13:21:39  
-**Tags:** Dataset  
+  
 
 # QA数据集概览
 

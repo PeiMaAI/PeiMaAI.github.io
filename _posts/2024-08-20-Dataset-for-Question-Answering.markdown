@@ -7,12 +7,6 @@ category: blog
 author: Pei Ma
 ---
 
-**Title:** Dataset for Question Answering (CN) [To be continued...]  
-**Date:** 2024-08-14 13:21:39  
-**Tags:** Dataset  
-
-© Wuyuhang, 2024. All rights reserved. This article is entirely the work of Wuyuhang from the University of Manchester. It may not be reproduced, distributed, or used without explicit permission from the author. For inquiries, please contact me at yuhang.wu-4 [at] postgrad.manchester.ac.uk.
-
 # Overview of QA Datasets
 
 Question Answering (QA) systems are a core area of research in natural language processing, aimed at extracting precise answers from various information sources. To meet diverse research needs and application scenarios, various QA datasets have emerged, systematically classified according to data format and task characteristics. This overview introduces several important QA datasets, covering a range of data types and task requirements. These datasets provide rich resources for testing and training, driving performance improvements and technological advancements in QA systems across different information formats.

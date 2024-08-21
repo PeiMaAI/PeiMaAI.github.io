@@ -1,7 +1,7 @@
 ---
 title: "RAG Augmentation Methods survey(CN)"
 layout: post
-date: 2024-08-15 12:30
+date: 2024-08-17 12:30
 headerImage: false  
 category: blog 
 author: Pei Ma

@@ -1,7 +1,7 @@
 ---
 title: "LLM for table data enhancement"
 layout: post
-date: 2024-08-15 09:19
+date: 2024-08-18 09:19
 headerImage: false  
 category: blog 
 author: Pei Ma
