@@ -1,7 +1,7 @@
 ---
 title: "TableRAG(CN)"
 layout: post
-date: 2024-08-21 09:42
+date: 2024-08-21 10:53
 headerImage: false  
 category: blog 
 author: Pei Ma
