@@ -9,48 +9,65 @@ author: Pei Ma
 
 # Background
 
-In today's information-driven society, the volume of unstructured data is growing at an unprecedented rate, becoming the primary form of information storage and transmission. According to relevant studies, more than 80% of global data exists in an unstructured format, with textual data occupying a significant portion. This textual data is ubiquitous across various industries, from legal documents and academic papers to corporate financial reports and social media content. However, despite the richness and diversity of unstructured text data providing vast opportunities for information retrieval and knowledge discovery, effectively processing and utilizing this data remains an unresolved challenge.
+In the current digital era, the amount of unstructured data is growing at an astonishing rate, becoming the primary form of information storage and transmission. Research indicates that over 80% of global data exists in unstructured formats, the vast majority of which is textual data. This data is ubiquitous across various industries, from legal documents and academic papers to corporate financial reports and social media content. However, despite the vast potential for information retrieval and knowledge discovery that this unstructured text data offers, effectively processing and utilizing it remains a challenge that has yet to be fully addressed.
 
-In our previous work, we introduced the **TableRAG** method for processing structured data, achieving significant advancements in this domain. TableRAG optimized the process of retrieving and generating information from structured tabular data through enhanced Retrieval-Augmented Generation (RAG) technology, significantly improving data utilization efficiency. If you are not yet familiar with this method, we recommend reviewing our related research on TableRAG to gain a comprehensive understanding of our technical approach to data processing optimization.
+Retrieval-Augmented Generation (RAG) technology combines the strengths of retrieval systems and large language models (LLMs), enabling the generation of content with reference to external knowledge bases, thereby significantly enhancing the accuracy and relevance of the generated content. RAG technology is particularly effective in handling complex queries that require extensive background information, as it can quickly retrieve relevant information from large datasets and generate high-quality content through LLMs. This method has been widely adopted across various fields, especially in scenarios requiring real-time generation of highly accurate responses.
 
-However, as data shifts from structured to unstructured formats, traditional RAG methods face increasing challenges in handling unstructured textual data. Compared to structured data, unstructured text data has more complex inherent semantics, more diverse content structures, and stronger contextual associations. This complexity often makes simple retrieval and generation methods less effective, particularly when faced with complex semantic queries. Traditional RAG models have significant shortcomings in terms of recall rates and generation quality for relevant documents.
+We have previously made significant progress in processing structured tabular data, particularly through the [TableRAG](https://yuhangwuai.github.io/2024/08/08/TableRAG-Advanced-Retrieval-Augmented-Generation-with-Sampling-and-Enhancement-for-Table-Reasoning-CN/) method, which successfully optimized the process of retrieving and generating information from structured tables. TableRAG enhances the RAG model, improving the efficiency and accuracy of extracting information from tabular data. For instance, when dealing with queries involving complex financial data, TableRAG can quickly extract relevant information and generate precise responses tailored to user needs. If you are not yet familiar with this method, we recommend reviewing the relevant research on [TableRAG](https://yuhangwuai.github.io/2024/08/08/TableRAG-Advanced-Retrieval-Augmented-Generation-with-Sampling-and-Enhancement-for-Table-Reasoning-CN/) to gain a comprehensive understanding of our technical approach to optimizing data processing.
 
-Facing these challenges, we realized that constructing a RAG model capable of handling only simple text retrieval and generation is no longer sufficient to meet practical application needs. Instead, we need a more advanced technology that can deeply understand the semantic structure of text, intelligently process contextual information, and enhance the quality of text data retrieval and generation across multiple dimensions.
+Despite RAG technology's strong performance across various domains, processing unstructured text data presents unique challenges. Unstructured text data is more complex in form, with diverse and layered semantic relationships, making it difficult for traditional RAG models to achieve optimal results when faced with complex queries. In our research, we have identified the following four key issues that are particularly prominent in the process of handling unstructured text:
 
-It is within this context that we developed **TextRAG**. TextRAG is not an independent system but rather a methodology aimed at optimizing the core capabilities of RAG models to perform better in processing unstructured text data. By introducing key technologies such as semantic slicing, automatic context generation, and relevant fragment extraction, TextRAG effectively enhances the model's understanding and generation capabilities for complex texts, significantly improving retrieval precision and generation quality.
+1. **Accuracy of Multi-level Semantic Segmentation**: Unstructured text often contains multiple semantic levels and complex logical structures. If these levels are not accurately segmented, the system may either separate closely related information or incorrectly mix unrelated information. For example, when processing a detailed legal document, the system might erroneously segment legal clauses from explanatory notes, resulting in retrieval outputs that lose contextual integrity. Accurately identifying and segmenting different semantic levels is crucial for maintaining information coherence, especially in lengthy documents.
 
-In the following sections, we will explore the core technical components of TextRAG in detail and demonstrate how these innovative methods advance the processing of unstructured text data.
+2. **Depth and Breadth of Context Generation**: When handling complex queries, the system needs to generate sufficiently rich and comprehensive contextual information to ensure the depth and breadth of the responses. This means the system must provide not only directly relevant information but also capture background, causes, effects, and details related to the query. If the context generation is not comprehensive, the system might miss critical information, leading to incomplete or biased responses. This limitation is particularly evident when users pose queries that require extensive background or involve multiple topics. If the system only provides fragmented information without a complete context, the final response may fail to meet user needs and potentially mislead the user's understanding.
+
+3. **Semantic Relevance Ranking for Complex Queries**: Initial retrieval may yield many paragraphs partially relevant to the query, but their ranking might not be precise enough, leading to suboptimal information retrieval. For instance, in a complex query about the impacts of climate change, the system might prioritize minor effects over major ones, affecting the user's overall understanding of the information. How relevant content is ranked in the retrieval results directly impacts the quality and coherence of the final generated content.
+
+4. **Challenges in Multi-document Information Integration**: When dealing with complex queries, the system typically returns multiple relevant text blocks to answer the question. For simple and narrowly scoped queries, such as "What is Shakespeare's birth year?", the system needs to return only a single text block to provide an accurate answer. This method works well for simple, direct questions. However, when the query is broader or more complex, traditional RAG methods face significant challenges in integrating multiple blocks to generate a complete response.
+
+    For instance, in response to a query like "Describe the impact of climate change on the global economy over the past decade," the system may need to extract information blocks from multiple documents. In such cases, traditional RAG methods often struggle to effectively integrate related content from different documents, resulting in fragmented information, lack of coherence, or missing critical cross-document links.
+
+    Additionally, some questions may require extracting information from multiple different sections of the same document. For example, to answer "Summarize the main risk factors mentioned in a financial report and their countermeasures," information may need to be extracted from the beginning of the document for risk factors and from the end for countermeasures. If the blocks are too small, the system may fail to capture enough context, leading to a lack of semantic coherence in the response; but if the blocks are too large, encompassing both the beginning and the end of the document, they may inevitably include a large amount of irrelevant information, reducing the accuracy of the response.
+
+    Therefore, optimizing block segmentation and integration to ensure information coherence and relevance is a significant challenge that RAG technology faces when dealing with broad or complex queries.
+
+To address these issues, we developed **TextRAG**. By enhancing the core capabilities of the RAG model, TextRAG excels at handling unstructured text data. TextRAG introduces key technologies such as semantic slicing, automated context generation, relevant fragment extraction, and intelligent block integration, thereby enhancing the model's ability to understand and generate responses from complex texts. These innovations significantly improve the accuracy and quality of information retrieval and generation, particularly when dealing with complex semantic queries, where TextRAG demonstrates exceptional performance.
+
+In the following sections, we will delve into the core technological components of TextRAG and illustrate how these innovative methods drive advancements in unstructured text data processing.
 
 # Overall
 
-### Core Framework Introduction
+## Introduction to the Core Framework
 
-In constructing TextRAG, we focused on addressing several key challenges encountered in processing unstructured text data and developed a set of innovative technologies around these challenges. The overall architecture of TextRAG consists of three main components: Context Segmentation, Context Generation, and Chunks Integration. Below is a flowchart of TextRAG's overall architecture:
+To address the critical challenges faced in processing unstructured text data, we developed TextRAG. The overall architecture of TextRAG consists of four main components: Context Segmentation, Context Generation, Rerank, and Chunks Integration. Below is a flowchart illustrating the overall architecture of TextRAG:
 
 ![image.png](/insert_images/image.png)
 
-This flowchart illustrates the overall design of TextRAG when processing complex text data. Our architecture includes the following core components:
+This flowchart demonstrates the overall design of TextRAG when processing complex text data. Each module plays a crucial role in addressing specific issues.
 
 1. **Context Segmentation**
-    
-    Context Segmentation is the foundational module of TextRAG, responsible for dividing long texts into multiple sections based on semantics and contextual logic. This segmentation process ensures that each section is coherent and meaningful, allowing subsequent processing steps to operate within more precise semantic ranges.
-    
-2. **Context Generation**
-    
-    The Context Generation module generates corresponding document-level and section-level contextual information for each segmented text portion. By adding this contextual information to text blocks, TextRAG can generate more accurate and semantically rich embedded vectors, thereby improving the effectiveness of text retrieval and generation.
-    
-3. **Rerank**
-    
-    During text retrieval, we use models from Cohere or Voyage to rerank the retrieved text blocks. The Rerank module sorts the text blocks by relevance, ensuring that the returned results are more closely aligned with the query, thereby enhancing retrieval precision.
-    
-4. **Chunks Integration**
-    
-    ![image.png](/insert_images//image%201.png)
-    
-    After reranking, the Chunks Integration module intelligently combines relevant text blocks, integrating them into more complete paragraphs. The overall architecture of Chunks Integration is shown above. This process ensures that the returned query results are not only highly relevant but also coherent and complete, particularly for handling complex queries.
-    
+   
+   The Context Segmentation module forms the foundation of TextRAG, responsible for segmenting lengthy texts into multiple sections based on semantic and contextual logic. This segmentation process ensures that each section is coherent and meaningful, avoiding the accuracy issues associated with multi-level semantic segmentation. For example, when processing a complex academic article, the system splits the content line by line and uses large language models (LLMs) for structured segmentation, precisely dividing related content. Additionally, the system generates concise and descriptive titles during segmentation, allowing users to quickly grasp the main content of each section through the titles. This not only optimizes the processing efficiency of long documents but also improves the precision and efficiency of information retrieval.
 
-In the following sections, we will explore the working principles of these core components in detail and demonstrate their application in unstructured text data processing. Through these detailed explanations, you will gain a deeper understanding of how TextRAG provides excellent performance and results in complex text processing tasks.
+2. **Context Generation**
+   
+   After completing context segmentation, the Context Generation module further enriches the contextual information of each segmented part. It generates document-level and section-level titles, summaries, and other contextual information, ensuring sufficient depth and breadth in the generated context. For example, in complex queries, the generated document summary can provide an overview of the core content, while section summaries offer finer-grained semantic background. This module not only helps the system generate comprehensive answers but also resolves conflicts in information from multiple documents, ensuring coherence and consistency in the responses.
+
+3. **Rerank**
+   
+   During the text retrieval process, the Rerank module fine-tunes the ranking of initially retrieved text blocks. Traditional RAG methods may not accurately rank content relevant to the query, resulting in fragmented or incoherent information. By using more advanced language models (such as Cohere or VoyageAI), the Rerank module performs a secondary ranking of text blocks based on semantic relevance, ensuring that the final results returned are the most relevant to the query. This module significantly improves the quality of responses to complex queries and optimizes the logical order of information integration.
+
+4. **Chunks Integration**
+   
+   ![image.png](/insert_images/image%201.png)
+   
+   After reranking, the Chunks Integration module intelligently combines relevant text blocks, ensuring that the returned query results are not only highly relevant but also coherent and complete. This module is particularly adept at addressing the challenges of multi-document information integration and cross-paragraph information integration. For complex queries that require extracting information from multiple documents, the Chunks Integration module intelligently integrates text blocks from different sources into a cohesive paragraph, avoiding the problem of fragmented information. Similarly, when information needs to be extracted from both the beginning and end of the same document, this module dynamically adjusts the size of the blocks to avoid the risk of including too much irrelevant information while ensuring completeness and contextual coherence. This allows TextRAG to provide comprehensive and accurate responses to complex queries.
+
+In the following sections, we will explore the working principles of these core components in detail and demonstrate their application in unstructured text data processing. Through these detailed explanations, you will gain a deeper understanding of how TextRAG delivers exceptional performance and results in complex text processing tasks.
+
+
+
+
 
 # Part 1: Context Segmentation
 
