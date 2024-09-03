@@ -10,15 +10,16 @@ layout: page
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>Python - PyTorch - TensorFlow</li>
-	<li>Deep Learning Frameworks (Keras, TensorFlow, PyTorch)</li>
+	<li>Python - PyTorch</li>
+	<li>Linux</li>
+	<li>C</li>
+	<li>Deep Learning</li>
 	<li>Large Language Models (GPT, BERT, Transformer-based architectures)</li>
 	<li>Natural Language Processing (NLP)</li>
 	<li>Retrieval-Augmented Generation (RAG)</li>
 	<li>Data Preprocessing and Feature Engineering</li>
 	<li>Data Analysis and Visualization</li>
 	<li>Git</li>
-	<li>MySQL - MongoDB</li>
 </ul>
 
 <h2>Projects</h2>
